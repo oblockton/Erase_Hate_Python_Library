@@ -1,6 +1,6 @@
 # NLP & Text Classification.  
-Module: erasehate.classifier
-File: erasehate/classifier.py
+**Module**: erasehate.classifier
+**File**: erasehate/classifier.py
 
 **erasehate.classifier(data,data_key='')**
 
@@ -75,9 +75,9 @@ The main class object. Instantiate the class object passing your `data`(1st argu
                                   'count': Count if items predicted/classified as neither 'hate' nor 'offensive'.
                                   'percentTotal': Percentage of all items that were classified as neither 'hate' nor 'offensive'.
 
-     - `classifier.use_mapping` -Boolean. Controls the mapping of user specified to the classification result sets. Default is False.
+     - **`classifier.use_mapping`** -Boolean. Controls the mapping of user specified to the classification result sets. Default is False.
 
-     - `classifier.results` - Contains the result set after data mapping method has been called. Default is None.
+     - **`classifier.results`** - Contains the result set after data mapping method has been called. Default is None.
 
 
 * Example Data Set:
