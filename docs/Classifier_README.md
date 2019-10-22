@@ -58,12 +58,12 @@ All further examples in this document will use this data set as the input data s
 
 The main class object. Instantiate the class object passing your `data`(1st argument), and a `data_key` string(second argument). After creating the class object, methods for text classification, filtering, grouping may be accessed.
 
-  **Arguments:**
+  * **Arguments:**
     - `data`: First argument. The data object that contains the list of text items to send for classification of "hate", "offensive", or 'neither' language.  Data may be a Python dictionary or list. By using a python dictionary you can map other data to your result sets(see .map_data() method below).
 
     - `data_key`: Second argument. The key where the list of text items is stored. When passing a python dictionary as the data input(first argument), YOU MUST specify the key whose value is the list of text items to perform NLP on. Default key is 'text', used when the data input is a list of text items.
 
-  **Class Object Attributes:**
+  * **Class Object Attributes:**
     - `classifier.data` - Contains the users data input. Set on instantiation of the class.
                        Accessed using `classobject.data`. If data input at class object creation is a list, a default dictionary is created. Input data is stored at key 'text'.
 
