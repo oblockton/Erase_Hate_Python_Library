@@ -13,7 +13,7 @@
 
   **If an error occurs during the submission process, this module will raise an exception and pass on the API code and error message from the Erase Hate API**.
 
-  API codes and error handling instruction can be found here: [API CODES & ERRORS](https://github.com/oblockton/Erase-Hate-Versioning/blob/master/Version2.5_10_9_2019/Main/api_README.md 'API Error Codes and Messages')
+  API codes and error handling instruction can be found here: [API Codes & Errors](https://github.com/oblockton/Erase_Hate_Python_Library/blob/master/docs/apicodes_README.md#erase-hate-api-codes--error-handling 'API Codes & Errors')
 
 ---
 

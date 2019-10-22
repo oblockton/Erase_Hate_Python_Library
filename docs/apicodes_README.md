@@ -1,6 +1,6 @@
 # Erase Hate API Codes & Error Handling
 
-  There are two main areas where you may encounter an error when attempting to implement any of the functions or methods of this library: at validation of your inputs, or interaction with the Erase Hate API. This document will provide information on the Erase Hate API codes, how to access the codes, and catch any API errors. Validation errors will raise the appropriate exceptions(TypeError, ValueError, etc). The validation error message is self explanatory and won't be covered in depth here. For Twitter API errors see the Erase Hate Library twitter doc: **[Twitter API wrapper](https://github.com/oblockton/Erase_Hate_Python_Library/blob/master/docs/twitter_README.md 'Twitter API wrapper')**
+  There are two main areas where you may encounter an error when attempting to implement any of the functions or methods of this library: at validation of your inputs, or interaction with the Erase Hate API. This document will provide information on the Erase Hate API codes, how to access the codes, and catch any API errors. Validation errors will raise the appropriate exceptions(TypeError, ValueError, etc). The validation error message is self explanatory and won't be covered in depth here. For Twitter API errors see the Erase Hate Library twitter doc: **[Twitter API wrapper](https://github.com/oblockton/Erase_Hate_Python_Library/blob/master/docs/twitter_README.md#twitter-api-requests 'Twitter API wrapper')**
 
   **Erase Hate API Codes:**
   - 200 = Successful
@@ -44,7 +44,7 @@
   In the example shown above we don't need to check the response from `.predict()`'s call to the API, because that verification is handled by the method. If an error occurs an Exception is raised.
 
   However, we CAN still verify the response of this method. The results of this call are stored at the class attribute `class.raw_output`. In addition to our classification results, the API response will include a key `api_code`.
-  (for more info on the 'predict' method see [NLP & Classification](https://github.com/oblockton/Erase_Hate_Python_Library/blob/master/docs/Classifier_README.md 'NLP & Hate Speech clasification'))
+  (for more info on the 'predict' method see [NLP & Classification](https://github.com/oblockton/Erase_Hate_Python_Library/blob/master/docs/Classifier_README.md#nlp--text-classification 'NLP & Hate Speech clasification'))
   > Verifying the response of a successful classification requests in addition to catching unsuccessful requests(code:500). We access the API response at class attribute '.raw_output' at key 'api_code'.
   ~~~~
   import erasehate as eh
