@@ -5,11 +5,11 @@
 
   The are 3 helper functions provided to assist with the reclassification and submission process:
 
-    - A function to submit properly formatted reclassification data to the Erase Hate servers. For use in the model retraining process.
+  - A function to submit properly formatted reclassification data to the Erase Hate servers. For use in the model retraining process.
 
-    - A function that creates a template HTML reclassification form.
+  - A function that creates a template HTML reclassification form.
 
-    - A function that will parse the HTML template form data, formatting it properly for submission  
+  - A function that will parse the HTML template form data, formatting it properly for submission  
 
   **If an error occurs during the submission process, this module will raise an exception and pass on the API code and error message from the Erase Hate API**
    API codes and error handling instruction can be found here: [API CODES & ERRORS](https://github.com/oblockton/Erase-Hate-Versioning/blob/master/Version2.5_10_9_2019/Main/api_README.md 'API Error Codes and Messages')
