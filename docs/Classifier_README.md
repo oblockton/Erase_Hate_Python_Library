@@ -2,7 +2,7 @@
 **Module**: erasehate.classifier
 **File**: erasehate/classifier.py
 
-###erasehate.classifier(data,data_key='')
+### erasehate.classifier(data,data_key='')
 
 The functions of requests to the model server API for text classification are handled by the `classifier()` class object. This class provides methods for classification, filtering results for a specific class, grouping by class, and mapping of other user specified data to the result set. This document provides information on all available methods, and the respective arguments, inputs, and outputs.
 

@@ -1,7 +1,7 @@
 # Twitter API requests
 **Module**: erasehate.twitter **File**:erasehate/twitter.py
 
-###erasehate.twit_API(multi_auth=False/True)
+### erasehate.twit_API(multi_auth=False/True)
 
 To allow users a quick source of data to perform NLP on, the Erase Hate Python Library has wrapped the tweepymashup Twitter API library. Tweepymashup is a continuation of the original Tweepy module, adding the ability to use multiple Twitter API credentials and switch between them as the rate limit approaches. Wrapping the tweepymashup library within the Erase Hate library allows for easy Twitter querying from within the Erase Hate module. In this document we will cover all the methods of the main class object `twit_API()`, which handles Twitter API queries.
 
