@@ -2,7 +2,7 @@
 **Module**: erasehate.classifier
 **File**: erasehate/classifier.py
 
-**erasehate.classifier(data,data_key='')**
+###erasehate.classifier(data,data_key='')
 
 The functions of requests to the model server API for text classification are handled by the `classifier()` class object. This class provides methods for classification, filtering results for a specific class, grouping by class, and mapping of other user specified data to the result set. This document provides information on all available methods, and the respective arguments, inputs, and outputs.
 
@@ -32,55 +32,13 @@ Though this library wraps incorporates a few helper methods useful for interacti
 
 By using the methods of this library, the conversion from a probability array to a single class item will be handled for you. Unless you decide to use the raw output from the model server.
 
-* **Class Labels**:
+**Class Labels**:
   - 0 = 'hate'
   - 1 = 'offensive'
   - 2 = 'neither' ; neither 'hate' nor 'offensive'
 
----
 
-### Class Object
-
-- **`classifier(data, data_key='text')`**
-
-The main class object. Instantiate the class object passing your `data`(1st argument), and a `data_key` string(second argument). After creating the class object, methods for text classification, filtering, grouping may be accessed.
-
-* Arguments:
-  - `data`: First argument. The data object that contains the list of text items to send for classification of "hate", "offensive", or 'neither' language.  Data may be a Python dictionary or list. By using a python dictionary you can map other data to your result sets(see .map_data() method below).
-
-  - `data_key`: Second argument. The key where the list of text items is stored. When passing a python dictionary as the data input(first argument), YOU MUST specify the key whose value is the list of text items to perform NLP on. Default key is 'text', used when the data input is a list of text items.
-
-* Class Object Attributes
-     - `classifier.data` - Contains the users data input. Set on instantiation of the class.
-                         Accessed using `classobject.data`. If data input at class object creation is a list, a default dictionary is created. Input data is stored at key 'text'.
-
-     - `classifier.data_key` - The attribute that contains the key where the data for NLP is stored.
-                             Default data_key is 'text' if none is specified, AND the data input is a list.  
-
-     - `classifier.raw_output` - Attribute that contains the response/raw output from the model server, set after calling the  prediction method. Before the prediction method is called, default is an empty string. The raw output from the model server contains the probability array, and a few basic aggregate statistics. The raw out is a dictionary with the following keys:
-
-                              - **'api_code'**: 200. If successful, when prediction fails an error response message is returned, and raw_output output remains the default empty string.
-
-                              - **'prediction_array'**: The probability array. This array is parallel to the list of text items sent for classification.
-
-                              - **'hate_data'**: Contains two keys.
-                                    'count': Count of items predicted/classified as hate Speech.
-                                    'percentTotal': Percentage of all items that were classified as hate speech.
-
-                              - **'hurt_data'**: Contains two keys.
-                                   'count': Count of items predicted/classified as offensive/hurtful Speech.
-                                   'percentTotal': Percentage of all items that were classified as offensive/hurtful.
-
-                              - **'neither_data'**: Contains two keys.
-                                  'count': Count if items predicted/classified as neither 'hate' nor 'offensive'.
-                                  'percentTotal': Percentage of all items that were classified as neither 'hate' nor 'offensive'.
-
-     - **`classifier.use_mapping`** -Boolean. Controls the mapping of user specified to the classification result sets. Default is False.
-
-     - **`classifier.results`** - Contains the result set after data mapping method has been called. Default is None.
-
-
-* Example Data Set:
+### Example Data Set:
 All further examples in this document will use this data set as the input data set.
 
    >Our data input is a Python dictionary. It contains information on multiple persons and their favorite phrases. The actual data that we want to perform NLP on are the phrases: stored at key 'phrases'.
@@ -92,6 +50,51 @@ All further examples in this document will use this data set as the input data s
             }
    ~~~~
 
+---
+
+## Class Object
+
+* **`classifier(data, data_key='text')`**
+
+The main class object. Instantiate the class object passing your `data`(1st argument), and a `data_key` string(second argument). After creating the class object, methods for text classification, filtering, grouping may be accessed.
+
+* Arguments:
+  - `data`: First argument. The data object that contains the list of text items to send for classification of "hate", "offensive", or 'neither' language.  Data may be a Python dictionary or list. By using a python dictionary you can map other data to your result sets(see .map_data() method below).
+
+  - `data_key`: Second argument. The key where the list of text items is stored. When passing a python dictionary as the data input(first argument), YOU MUST specify the key whose value is the list of text items to perform NLP on. Default key is 'text', used when the data input is a list of text items.
+
+* Class Object Attributes
+  - `classifier.data` - Contains the users data input. Set on instantiation of the class.
+                     Accessed using `classobject.data`. If data input at class object creation is a list, a default dictionary is created. Input data is stored at key 'text'.
+
+ - `classifier.data_key` - The attribute that contains the key where the data for NLP is stored.
+                         Default data_key is 'text' if none is specified, AND the data input is a list.  
+
+ - `classifier.raw_output` - Attribute that contains the response/raw output from the model server, set after calling the  prediction method. Before the prediction method is called, default is an empty string. The raw output from the model server contains the probability array, and a few basic aggregate statistics. The raw out is a dictionary with the following keys:
+
+      - **'api_code'**: 200. If successful, when prediction fails an error response message is returned, and raw_output output remains the default empty string.
+
+      - **'prediction_array'**: The probability array. This array is parallel to the list of text items sent for classification.
+
+      - **'hate_data'**: Contains two keys.
+            'count': Count of items predicted/classified as hate Speech.
+            'percentTotal': Percentage of all items that were classified as hate speech.
+
+      - **'hurt_data'**: Contains two keys.
+           'count': Count of items predicted/classified as offensive/hurtful Speech.
+           'percentTotal': Percentage of all items that were classified as offensive/hurtful.
+
+      - **'neither_data'**: Contains two keys.
+          'count': Count if items predicted/classified as neither 'hate' nor 'offensive'.
+          'percentTotal': Percentage of all items that were classified as neither 'hate' nor 'offensive'.
+
+ - **`classifier.use_mapping`** -Boolean. Controls the mapping of user specified to the classification result sets. Default is False.
+
+ - **`classifier.results`** - Contains the result set after data mapping method has been called. Default is None.
+
+
+
+
 
 
 * Instantiation/creation of a new class object.
@@ -102,14 +105,15 @@ All further examples in this document will use this data set as the input data s
     classifier_object = eh.classifier(phrase_data, data_key = 'phrases')
     ~~~~
 
+---
 
-### Methods
+## Methods
 
-- **`class.predict()`**
+* **`class.predict()`**
 
   Method to send data for prediction, to the model server API. Takes no input when called. After calling the method, the response from the model server is stored at the attribute `.raw_output`. At this point, after creating the class object ,then calling the `predict()` method, the only classification result available is the response of the model server(see the .raw_output attribute description above, for the model server response contents). This method returns the class object, allowing the filtering and grouping methods to be chained to the '.predict()' method. If the model server encounters an error processing your request, the an exception will be raised( see [API CODES & ERRORS](https://github.com/oblockton/Erase-Hate-Versioning/blob/master/Version2.5_10_9_2019/Main/api_README.md 'API Error codes and messages')).
 
-* Example:
+**Example:**
   Calling the predict method, chained to the creation of a new class object. Then accessing the raw output from the model server.
 
   > Creating the new class object, calling the predict method by chaining the '.predict()' method call to class object creation.
@@ -124,11 +128,11 @@ All further examples in this document will use this data set as the input data s
   ~~~~
 ---
 
-- **`class.filter_class(keyword=None, include_mapped= False/True)`**
+* **`class.filter_class(keyword=None, include_mapped= False/True)`**
 
   Method that provides filtered classification results. Results can be filtered for only the 'hate', 'offensive', or 'neither' results. This method will also return results with the probability array converted to a class label. Takes two arguments, the keyword of the class by which to filter results( first argument), and the boolean which controls inclusion of mapped data in the results. This method returns results as a list of result sets(list). Each item in the list is the NLP result set for a single text item which was sent for classification. The result set for each text item is also a list containing, the text at index [0], class label at index [1], unique item number at index [2], then any mapped data if the argument `include_mapped = True` was passed.
 
-* Arguments:
+  **Arguments**:
   - `keyword` - The class for which we filter results. Keyword may be 'hate', 'offensive', or 'neither'. The default is None, which returns complete unsorted results.
 
   - `include_mapped` - Boolean. When True, mapped data will be included in the result sets.
