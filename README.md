@@ -5,7 +5,7 @@
 
 
 # Erase Hate Python Library
-## A Python library for the Erase Hate API
+**A Python library for the Erase Hate API**
 
 This is the official Python library for interfacing with the EraseHateApp.com API. The Erase Hate application allows users to perform Natural Language Processing and classification of text as 'hateful', 'offensive', or 'neither' through the use of ML and neural network deep learning. If users disagree with the model's analysis, they may then reclassify an item choosing the classification they think is the best fit. Their reclassification data is then used in further continuous model training. Use this library to easily execute hate speech classification and perform many of the same functions available at EraseHateApp.com . Built for the purpose of allowing external Developers to integrate NLP into their own projects. Developers are strongly encouraged to submit any user reclassified data to the Erase Hate server, for use in model retraining.   
 
