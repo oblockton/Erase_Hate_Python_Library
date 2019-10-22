@@ -9,16 +9,17 @@ To allow users a quick source of data to perform NLP on, the Erase Hate Python L
 
 These are the default params of the TweepyMashup module:
 ~~~~
- auth_handler=None,
- host='api.twitter.com', search_host='search.twitter.com',
- upload_host='upload.twitter.com', cache=None, api_root='/1.1',
- search_root='', upload_root='/1.1', retry_count=0,
- retry_delay=0, retry_errors=None, timeout=60, parser=None,
- compression=False,monitor_rate_limit=False,wait_on_rate_limit=False
- wait_on_rate_limit_notify=False, proxy='')
+auth_handler=None,
+host='api.twitter.com', search_host='search.twitter.com',
+upload_host='upload.twitter.com', cache=None, api_root='/1.1',
+search_root='', upload_root='/1.1', retry_count=0,
+retry_delay=0, retry_errors=None, timeout=60, parser=None,
+compression=False,monitor_rate_limit=False,wait_on_rate_limit=False
+wait_on_rate_limit_notify=False, proxy='')
 ~~~~
 
- Within this library the default parameters remain in use, with the exception of `monitor_rate_limit` and `wait_on_rate_limit`. When using multiple API tokens, `monitor_rate_limit` will be passed with a value of True. The `wait_on_rate_limit` parameter is always True.
+Within this library the default parameters remain in use, with the exception of `monitor_rate_limit` and `wait_on_rate_limit`. When using multiple API tokens, `monitor_rate_limit` will be passed with a value of True. The `wait_on_rate_limit` parameter is always True.
+
 ---
 
 ## Class Object
@@ -157,11 +158,11 @@ These are the default params of the TweepyMashup module:
   If a Twitter API error occurs, this Twitter module will raise an exception with a descriptive error message. The first 3 characters of the error message will contain the API error code from Twitter. The remainder of the message contains the error details. Errors can be caught using a `try & except`, with parsing of the exception message to access the API code or error message. Provided below are the Twitter API codes and an example of catching a Twitter API error.
 
   **API Codes**
-    - 404 : Query input returned no results.
+  - 404 : Query input returned no results.
 
-    - 401 : Access unauthorized. This code indicates there was either an issue with your Twitter credentials(API keys) or your query attempted to access unauthorized information (such as a user's timeline with private access enabled). If you are attempting to access tweets from a private user's timeline, you must request access on the Twitter platform( friend/connection request).
+  - 401 : Access unauthorized. This code indicates there was either an issue with your Twitter credentials(API keys) or your query attempted to access unauthorized information (such as a user's timeline with private access enabled). If you are attempting to access tweets from a private user's timeline, you must request access on the Twitter platform( friend/connection request).
 
-    - 500 : Any other Twitter error. The error message from Twitter is passed on, in the error message provided by this module.
+  - 500 : Any other Twitter error. The error message from Twitter is passed on, in the error message provided by this module.
 
   **Example:** You have attempted to make a query for a topic, but your query input returned no results. This error raised an exception we must catch.
   > Attempting to make a topic query. We wrap the query attempt with a try/except, if an error occurs we will parse the exception message to verify the specific API code returned from Twitter.
