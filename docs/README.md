@@ -3,7 +3,6 @@
 There are 3 core functions of this Python Library:
 
   * NLP & text classification (classifier.py):
-    
      Analyze text and classify it as either 'hateful', 'offensive', or 'neither'.
 
   * Reclassification submission(reclass.py):
