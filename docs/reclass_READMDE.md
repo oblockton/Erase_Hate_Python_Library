@@ -11,8 +11,9 @@
 
   - A function that will parse the HTML template form data, formatting it properly for submission  
 
-  **If an error occurs during the submission process, this module will raise an exception and pass on the API code and error message from the Erase Hate API**
-   API codes and error handling instruction can be found here: [API CODES & ERRORS](https://github.com/oblockton/Erase-Hate-Versioning/blob/master/Version2.5_10_9_2019/Main/api_README.md 'API Error Codes and Messages')
+  **If an error occurs during the submission process, this module will raise an exception and pass on the API code and error message from the Erase Hate API**.
+
+  API codes and error handling instruction can be found here: [API CODES & ERRORS](https://github.com/oblockton/Erase-Hate-Versioning/blob/master/Version2.5_10_9_2019/Main/api_README.md 'API Error Codes and Messages')
 
 ---
 
@@ -28,12 +29,12 @@
   or
   `[ [classlabel_integer, 'text'], [classlabel_integer, 'text'] ]`
 
-  Class labels:
-   Class labels may be 0 ,1, or 2. With 0 = 'hate', 1 = 'offensive', '2' = 'neither'(neither hate nor offensive).
-   Acceptable formats for class label are string or integer:
-    `'0', '1', '2'`  or `0, 1, 2`
+  **Class Labels:**
+  Class labels may be 0 ,1, or 2. With 0 = 'hate', 1 = 'offensive', '2' = 'neither'(neither hate nor offensive).
+  Acceptable formats for class label are string or integer:
+  `'0', '1', '2'`  or `0, 1, 2`
 
-   Not acceptable: `'zero', 'one', 'two'`
+  Not acceptable: `'zero', 'one', 'two'`
 
   The input must be a list of lists. Each item within the outermost list, is a list containing the class label and the text item. The order of class label first, and text string second is required. **Class label at index [0], text string at index [1]**
 
@@ -52,7 +53,7 @@
                       ['0', 'text']                      
                      ]
 
- eh.sumbit_reclassed(reclassed_data)
+  eh.sumbit_reclassed(reclassed_data)
   ~~~~
 --------------
 
@@ -105,7 +106,7 @@
     - `form` - the form, or python dictionary object to be parsed.
     - `delimiter` - the character, symbol, or delimiting word that separates the class label and text item.
 
-  HTML Template reclassification form values with '/' as the delimiter:
+  HTML template reclassification form values, with '/' as the delimiter:
   ~~~~
   <option value="0 / {{ item[0] }}">No Change</option>
   <option value="1 / {{ item[0] }}">Hurtful</option>
