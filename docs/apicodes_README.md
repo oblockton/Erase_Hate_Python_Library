@@ -81,8 +81,9 @@
       *do something else*
   ~~~~
 
-  As you see in this example, we have a try/except that is looking to catch a 500 or 404 API code. Though the function `submit_reclassed()` doesn't produce any data, response from the API is still returned by the function. The response from the API includes a key 'api_code', which we can check for an API code of 200.  
-======
+As you see in this example, we have a try/except that is looking to catch a 500 or 404 API code. Though the function `submit_reclassed()` doesn't produce any data, response from the API is still returned by the function. The response from the API includes a key 'api_code', which we can check for an API code of 200.  
+
+---------
 
 ## 404 & 403
 
