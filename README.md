@@ -18,9 +18,9 @@ Need data?
 
 ======
 ## Ready to get started?
-[Docs & Instructions](https://github.com/oblockton/Erase-Hate-Versioning/blob/master/Version2.5_10_9_2019/Main/api_README.md 'Documentation')
+[Docs & Instructions](https://github.com/oblockton/Erase_Hate_Python_Library/blob/master/docs/README.md 'Documentation')
 
-[Examples & Tutorial](https://github.com/oblockton/Erase-Hate-Versioning/blob/master/Version2.5_10_9_2019/Main/api_README.md 'Examples')
+[Examples & Tutorial](https://github.com/oblockton/Erase_Hate_Python_Library/tree/master/example 'Examples')
 
 Installation
 ------------
