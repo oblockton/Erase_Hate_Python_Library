@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Reclass Form Example</title>
+  </head>
+  <body>
+    <!-- We create a form, on submission it makes a POST request to the Flask route that submits the data to the Erase Hate database -->
+    <form action='/reclass_submit' method="POST" class="">
+      <div class="col-12">
+        <div id="reclass" class="col-12">
+          <!-- We need to dynamically create a form item for each results we want the user to reclassify -->
+          <!-- In Flask we returned 'reclass_data' as an argument to the 'render_template' function -->
+          <!-- We iterate through the 'reclass_data' creating a form item for each item in 'reclass_data' -->
+          {% for item in reclass_data %}
+            <div class="row">
+              <p class=''>{{ item[0] }}</p>
+              <select class="form-control" name="{{ item[2] }}">
+                <option value="0 delimiter {{ item[0] }}">No Change</option>
+                <option value="1 delimiter {{ item[0] }}">Hurtful</option>
+                <option value="2 delimiter {{ item[0] }}">Harmless</option>
+              </select>
+            </div>
+            <hr style="color:lavender;width:100%;">
+          {% endfor %}
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+          <button type="submit" value="Submit" class=""><span class=""></span>Submit</button>
+        </div>
+      </div>
+    </form>
+
+  </body>
+</html>
