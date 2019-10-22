@@ -3,17 +3,18 @@
 There are two main areas where you may encounter an error when attempting to implement any of the functions or methods of this library: at validation of your inputs, or interaction with the Erase Hate API. This document will provide information on the Erase Hate API codes, how to access the codes, and catch any API errors. Validation errors will raise the appropriate exceptions(TypeError, ValueError, etc). The validation error message is self explanatory and won't be covered in depth here. For Twitter API errors see the Erase Hate Library twitter doc: **[Twitter API wrapper](https://github.com/oblockton/Erase_Hate_Python_Library/blob/master/docs/twitter_README.md 'Twitter API wrapper')**
 
 **Erase Hate API Codes:**
- - 200 = Successful
- - 500 = Failed. Code error, SQL insert error, or any other exceptions .
- - 403 = Authentication Error
- - 404 = Resource not found
+- 200 = Successful
+- 500 = Failed. Code error, SQL insert error, or any other exceptions .
+- 403 = Authentication Error
+- 404 = Resource not found
 
 **Functions/Methods that make API calls**
-  - `.predict()` -Method of class 'classifier()'. Module: erasehate.classifier
+- `.predict()` -Method of class 'classifier()'. Module: erasehate.classifier
 
-  - `reclass_submit()` - Function. Module: erasehate.reclass
+- `reclass_submit()` - Function. Module: erasehate.reclass
 
 The Erase Hate API will always return a response to requests, even if the requested action fails. When directly using the API it is important to verify the response of each request. However, when using this library the response verification is handled for you.
+
 **If any API code besides 200(success) is returned in the API response, an exception will be raised**
 
 By raising an exception, it avoids operations that complete and return results you were not expecting. The first 3 characters of the Exception message will contain the API error code. The remainder of the message contains the error details. Errors can be caught using a `try & except`, with parsing of the exception message to access the API code or error message.
@@ -80,6 +81,7 @@ except Exception as e:
 ~~~~
 
 As you see in this example, we have a try/except that is looking to catch a 500 or 404 API code. Though the function `submit_reclassed()` doesn't produce any data, response from the API is still returned by the function. The response from the API includes a key 'api_code', which we can check for an API code of 200.  
+======
 
 ### 404 & 403
 
