@@ -17,7 +17,7 @@ The library also incorporates handling of API errors, with API codes and descrip
 
 The documentation has been partitioned in four sections:
 
-- **[NLP & CLassification](https://github.com/oblockton/Erase_Hate_Python_Library/blob/master/docs/Classifier_README.md 'NLP & Hate Speech clasification')**
+- **[NLP & Classification](https://github.com/oblockton/Erase_Hate_Python_Library/blob/master/docs/Classifier_README.md 'NLP & Hate Speech clasification')**
 
 - **[Reclassification Submission](https://github.com/oblockton/Erase_Hate_Python_Library/blob/master/docs/reclass_READMDE.md 'Reclassification Submission')**
 
