@@ -1,7 +1,0 @@
-[run]
-source = erasehate
-
-[report]
-omit =
-  */python?.?/*
-  */site-packages/*

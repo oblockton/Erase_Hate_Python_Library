@@ -1,7 +1,7 @@
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/oblockton/Erase-Hate-Versioning)
-[![Documentation Status](http://img.shields.io/badge/docs-v1.0.0-brightgreen.svg?style=flat)](https://github.com/oblockton/Erase-Hate-Versioning)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://pypi.org/project/erasehate/)
+[![Documentation Status](http://img.shields.io/badge/docs-v1.0.4-brightgreen.svg?style=flat)](https://github.com/oblockton/Erase-Hate-Versioning)
+[![Version](https://img.shields.io/badge/version-1.0.4-blue)](https://pypi.org/project/erasehate/)
 
 
 # Erase Hate Python Library
@@ -27,14 +27,15 @@ Installation
 The easiest way to install the latest version
 is by using pip to pull it from PyPi:
 
-    pip install erasehate
+  `pip install erasehate`
 
 You may also use Git to clone the repository from
 GitHub and install it manually:
-
-    git clone git@github.com:oblockton/Erase_Hate_Python_Library.git
-    cd Erase_Hate_Python_Library
-    python setup.py install
+  ~~~~
+  git clone git@github.com:oblockton/Erase_Hate_Python_Library.git
+  cd Erase_Hate_Python_Library
+  python setup.py install
+  ~~~~
 
 Python 3.5, 3.6, & 3.7 are supported.
 

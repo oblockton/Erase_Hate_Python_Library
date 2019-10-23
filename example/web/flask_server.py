@@ -30,7 +30,7 @@ twitter_api = erasehate.twit_API(multi_auth=True)
 twitter_api.set_auth(twitter_keys)
 
 
-@application.route('/reclass_form page')
+@application.route('/reclass_page')
 def reclass_page():
 
     #########################################################################################
@@ -68,7 +68,7 @@ def reclass_page():
 
 
 @application.route('/reclass_submit', methods=['POST'])
-def submit():
+def reclas_submit():
     '''  This route/view is used to submit reclassed items to the EraseHateApp.com database.
     The reclassed items will be used in future model training.
 

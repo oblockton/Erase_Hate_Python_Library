@@ -1,10 +1,10 @@
 Also see https://github.com/ for changelogs.
 
-Version 1.0.0
+Version 1.0.4
 -------------
 # Features
 
-## V 1.0.0
+## V 1.0.4 - Origin
   - Classify text as hate speech.
     - Send items for prediction
     - Access raw output from model server consisting of the probability array and basic aggregate stats

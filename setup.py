@@ -25,13 +25,13 @@ setup(name="erasehate",
       author="Oblockton",
       author_email="erasehatedata@gmail.com",
       url="https://github.com/oblockton/Erase_Hate_Python_Library",
-      packages=find_packages(exclude=['tests', 'examples']),
+      packages=find_packages(exclude=['example']),
       install_requires=[
           "PySocks>=1.5.7",
-          "requests>=2.22.1",
+          "requests>=2.22.0",
           "requests_oauthlib>=1.2.0",
-          "tweepymashup=1.0.7",
-          'numpy=1.16.4'
+          "tweepymashup>=1.0.7",
+          'numpy>=1.16.4'
       ],
       keywords="hatespeech NLP",
       python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*',

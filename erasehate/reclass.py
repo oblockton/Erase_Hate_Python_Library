@@ -1,4 +1,4 @@
-import request
+import requests
 import datetime
 '''
     Function to submit reclassed items to erasehateapp.com database.
