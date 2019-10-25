@@ -11,7 +11,7 @@
   **Functions/Methods that make API calls**
   - `.predict()` -Method of class 'classifier()'. Module: erasehate.classifier
 
-  - `reclass_submit()` - Function. Module: erasehate.reclass
+  - `reclass_submission()` - Function. Module: erasehate.submission
 
   The Erase Hate API will always return a response to requests, even if the requested action fails. When directly using the API it is important to verify the response of each request. However, when using this library the response verification is handled for you.
 
@@ -65,11 +65,11 @@
   OUT >>> 'Request Successful'
   ~~~~
 
-**Example:** Submitting reclassified items using the `submit_reclassed()` function. In this example we will do different things depending on the code returned. We will also check the response if successful.
-  > Calling the submit_reclassed funtion, wrapped with a try/except.
+**Example:** Submitting reclassified items using the `reclass_submission()` function. In this example we will do different things depending on the code returned. We will also check the response if successful.
+  > Calling the 'reclass_submission' funtion, wrapped with a try/except.
   ~~~~
   try:
-    response = submit_reclassed(reclassed_data)
+    response = reclass_submission(reclassed_data)
     if response['api_code'] == 200:
       print('Success!!')
 
@@ -81,7 +81,7 @@
       *do something else*
   ~~~~
 
-As you see in this example, we have a try/except that is looking to catch a 500 or 404 API code. Though the function `submit_reclassed()` doesn't produce any data, response from the API is still returned by the function. The response from the API includes a key 'api_code', which we can check for an API code of 200.  
+As you see in this example, we have a try/except that is looking to catch a 500 or 404 API code. Though the function `reclass_submission()` doesn't produce any data, response from the API is still returned by the function. The response from the API includes a key 'api_code', which we can check for an API code of 200.  
 
 ---------
 

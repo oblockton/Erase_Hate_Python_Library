@@ -15,7 +15,7 @@ Installation
 The easiest way to install the latest version
 is by using pip/easy_install to pull it from PyPI:
 
-    pip install erasehate==1.02
+    pip install erasehate
 
 You may also use Git to clone the repository from
 GitHub and install it manually:

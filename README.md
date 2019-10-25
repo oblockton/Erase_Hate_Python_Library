@@ -1,7 +1,7 @@
 
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/oblockton/Erase-Hate-Versioning)
-[![Documentation Status](http://img.shields.io/badge/docs-v1.0.4-brightgreen.svg?style=flat)](https://github.com/oblockton/Erase-Hate-Versioning)
-[![Version](https://img.shields.io/badge/version-1.0.4-blue)](https://pypi.org/project/erasehate/)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/oblockton/Erase_Hate_Python_Library#erase-hate-python-library)
+[![Documentation Status](http://img.shields.io/badge/docs-v1.1.0-brightgreen.svg?style=flat)](https://github.com/oblockton/Erase_Hate_Python_Library#erase-hate-python-library)
+[![Version](https://img.shields.io/badge/version-1.1.0-blue)](https://pypi.org/project/erasehate/)
 
 
 # Erase Hate Python Library

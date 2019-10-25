@@ -84,7 +84,7 @@ def reclas_submit():
         # Submit the reclassed items to the database.
         # If using custom form parsing. Make sure the reclassed items submitted are in the form of a list of lists:
         # As such : [['class label', 'text/tweet'], ['classlabel', 'text2/tweet2'], ['classlabel', 'text3/tweet3']]
-        response = erasehate.submit_reclassed(reclassed_items)
+        response = erasehate.reclass_submission(reclassed_items)
         if response['api_code'] == 200:
 
             return render_template('success.html')

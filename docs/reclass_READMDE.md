@@ -1,7 +1,7 @@
 # Reclassifying Text & Reclassified Text Submission
-**Module:** erasehate.reclass  **File:** erasehate/reclass.py
+**Module:** erasehate.reclass & erasehate.submission  **File:** erasehate/reclass.py & erasehate/submission.py
 
-  One of the core properties of the Erase Hate application is it's ability to continually retrain the classification model. After a user makes a request for classification of a text item, users are then presented with the option to reclassify the item if they don't agree with the models analysis. The actual method of reclassification implemented by user's of the Erase Hate API and this library will vary based on the users needs or application. Users may have people reclassifying text items within an Excel spreadsheet, or build a reclassification function into a web form. Though your method of doing reclassification will be unique to your project, this library does provide a few helper functions to simply submission of those reclassed items. In this document we will cover the details of those helper functions, their arguments, parameters, and usage.
+  One of the core properties of the Erase Hate application is it's ability to continually retrain the classification model. After a user makes a request for classification of a text item, users are then presented with the option to reclassify the item if they don't agree with the models analysis. The actual method of reclassification implemented by user's of the Erase Hate API and this library will vary based on the users needs or application. Users may have people reclassifying text items within an Excel spreadsheet, or build a reclassification function into a web form. Though your method of doing reclassification will be unique to your project, this library does provide a few helper functions to simply submission of those reclassified items. In this document we will cover the details of those helper functions, their arguments, parameters, and usage.
 
   The are 3 helper functions provided to assist with the reclassification and submission process:
 
@@ -19,7 +19,7 @@
 
 ### Functions
 
-* **`sumbit_reclassed(reclassed_items)`**
+* **`reclass_submission(reclassed_items)`   Module: erasehate.submission**
 
   This function sends a post request to the Erase Hate API endpoint, to submit your reclassified data. Takes one argument/input, the items to be submitted.
 
@@ -53,7 +53,7 @@
                       ['0', 'text']                      
                      ]
 
-  eh.sumbit_reclassed(reclassed_data)
+  eh.reclass_submission(reclassed_data)
   ~~~~
 --------------
 
